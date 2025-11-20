@@ -1,0 +1,193 @@
+/* Global Reset and Variables */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --background-color: #f4f7f6;
+    --text-color: #333;
+    --font-family: 'Arial', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    scroll-behavior: smooth;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#nav-menu a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    transition: color 0.3s;
+}
+
+#nav-menu a:hover {
+    color: var(--primary-color);
+}
+
+.menu-toggle {
+    display: none; /* Hide button on desktop */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+.secondary-btn {
+    background-color: var(--text-color);
+}
+
+.secondary-btn:hover {
+    background-color: #555;
+}
+
+/* Sections */
+.hero-section {
+    background-color: white;
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.content-section {
+    padding: 3rem 10%;
+    margin: 2rem 0;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.content-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+/* Skills and Works Grids */
+.skills-grid, .works-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.skill-item, .work-item {
+    background-color: #ecf0f1;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Contact Form */
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: var(--font-family);
+}
+
+#contact-form textarea {
+    resize: vertical;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--secondary-color);
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* Mobile Responsiveness (Media Query) */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    #nav-menu {
+        display: none; /* Hidden by default on small screens */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Below the header */
+        left: 0;
+        background-color: var(--secondary-color);
+        padding: 1rem 0;
+    }
+
+    #nav-menu.active {
+        display: flex; /* Show when 'active' class is added by JS */
+    }
+
+    #nav-menu a {
+        margin: 0.5rem 2rem;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #3c546b;
+    }
+
+    .menu-toggle {
+        display: block; /* Show button on small screens */
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .content-section {
+        padding: 2rem 5%;
+    }
+}

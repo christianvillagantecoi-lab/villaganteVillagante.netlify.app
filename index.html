@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Creative Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">My Portfolio</div>
+        <nav id="nav-menu">
+            <a href="#about">About Me</a>
+            <a href="#skills">Skills</a>
+            <a href="#works">Works</a>
+            <a href="#resume">Resume</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="nav-menu">
+            ☰
+        </button>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <h1>Hello, I'm **[Your Name]**</h1>
+            <p>A passionate **Web Developer** focused on creating elegant and functional user experiences.</p>
+            <a href="#contact" class="btn">Get In Touch</a>
+        </section>
+
+        <section id="about" class="content-section">
+            <h2>About Me **(My Story)**</h2>
+            <p>I started my journey in web development [mention a brief story, e.g., 'after being fascinated by how interactive websites are built']. I thrive on problem-solving and continually learning new platform technologies like **React** and **Node.js**.</p>
+        </section>
+
+        <section id="skills" class="content-section">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">HTML5 & CSS3</div>
+                <div class="skill-item">JavaScript (ES6+)</div>
+                <div class="skill-item">Git & GitHub</div>
+                <div class="skill-item">Responsive Design</div>
+            </div>
+        </section>
+
+        <section id="works" class="content-section">
+            <h2>My Works **(Portfolio Showcase)**</h2>
+            <div class="works-grid">
+                <div class="work-item">Project 1: **E-commerce Frontend** **(Platform Technology: React)**</div>
+                <div class="work-item">Project 2: **Data Visualization Dashboard** **(Platform Technology: D3.js)**</div>
+            </div>
+        </section>
+
+        <section id="resume" class="content-section">
+            <h2>Online Resume & Achievements</h2>
+            <p>You can find my formal resume and a list of my **achievements** below. Key accomplishments include [mention an achievement, e.g., 'completing a full-stack bootcamp'] and [mention another, e.g., 'contributing to an open-source project'].</p>
+            <a href="#" class="btn secondary-btn" download>Download Full Resume (PDF)</a>
+        </section>
+        
+        <section id="contact" class="content-section">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 [Your Name] Portfolio</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
